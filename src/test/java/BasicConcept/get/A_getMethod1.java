@@ -1,4 +1,4 @@
-package BasicConcept;
+package BasicConcept.get;
 
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;

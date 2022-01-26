@@ -1,4 +1,4 @@
-package BasicConcept;
+package BasicConcept.validations;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;

@@ -1,4 +1,4 @@
-package BasicConcept;
+package BasicConcept.get;
 
 import static io.restassured.RestAssured.given;
 

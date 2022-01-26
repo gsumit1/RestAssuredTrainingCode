@@ -1,4 +1,4 @@
-package BasicConcept;
+package BasicConcept.parameter;
 
 import static org.hamcrest.Matchers.equalTo;
 
