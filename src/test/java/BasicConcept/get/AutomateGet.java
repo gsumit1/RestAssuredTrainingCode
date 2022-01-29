@@ -10,12 +10,14 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 public class AutomateGet {
+	
+	String key="";
 
     @Test
     public void validate_status_code(){
         given().
                 baseUri("https://api.postman.com").
-                header("X-Api-Key", "PMAK-5ff2d720d2a39a004250e5da-c658c4a8a1cee3516762cb1a51cba6c5e2").
+                header("X-Api-Key", key).
         when().
                 get("/workspaces").
         then().
@@ -28,7 +30,7 @@ public class AutomateGet {
     public void validate_response_body(){
         given().
                 baseUri("https://api.postman.com").
-                header("X-Api-Key", "PMAK-61f19b2ffe0a1f11f5e5d562-538d5aed280373c319a7f58652e7765397").
+                header("X-Api-Key", key).
         when().
                 get("/workspaces").
         then().
@@ -50,7 +52,7 @@ public class AutomateGet {
     public void extract_response(){
         Response res = given().
                 baseUri("https://api.postman.com").
-                header("X-Api-Key", "PMAK-61f19b2ffe0a1f11f5e5d562-538d5aed280373c319a7f58652e7765397").
+                header("X-Api-Key", "key").
         when().
                 get("/workspaces").
         then().
@@ -65,7 +67,7 @@ public class AutomateGet {
     public void extract_single_value_from_response(){
         String name = given().
                 baseUri("https://api.postman.com").
-                header("X-Api-Key", "PMAK-61f19b2ffe0a1f11f5e5d562-538d5aed280373c319a7f58652e7765397").
+                header("X-Api-Key", key).
         when().
                 get("/workspaces").
         then().
@@ -83,7 +85,7 @@ public class AutomateGet {
     public void hamcrest_assert_on_extracted_response(){
         String name = given().
                 baseUri("https://api.postman.com").
-                header("X-Api-Key", "PMAK-61f19b2ffe0a1f11f5e5d562-538d5aed280373c319a7f58652e7765397").
+                header("X-Api-Key", key).
         when().
                 get("/workspaces").
         then().
