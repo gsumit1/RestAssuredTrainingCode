@@ -24,7 +24,7 @@ public class CreateJson {
 
 		try {
 			@SuppressWarnings("resource")
-			FileWriter file = new FileWriter(".//test.json");
+			FileWriter file = new FileWriter(".//test123.json");
 			file.write(obj.toJSONString());
 		} catch (IOException e) {
 			e.printStackTrace();

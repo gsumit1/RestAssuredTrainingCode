@@ -13,14 +13,22 @@ public class sslValidation {
 	@Test
 	public void ssl_validation() {
 		
-		String response = 
+	/*	String response = 
 				given().get("https://jsonplaceholder.typicode.com/photos/1")
 				.then()
 				.contentType(ContentType.JSON)
 				.extract()
 				.path("url");
 		System.out.println(response.toString());
-		given().relaxedHTTPSValidation().get(response).then().statusCode(200);
+		
+		*/
+		
+		given().relaxedHTTPSValidation().get("https://via.placeholder.com/600/92c952").then().statusCode(200);
+		
+		
+		
+		
+		//given().relaxedHTTPSValidation().get(response).then().statusCode(200);
 		
 		
 		

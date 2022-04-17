@@ -10,11 +10,11 @@ public class UploadFile {
 
     @Test
     public void upload_file_multipart_form_data(){
-        String attributes = "{\"name\":\"temp.txt\",\"parent\":{\"id\":\"123456\"}}";
+       // String attributes = "{\"name\":\"temp.txt\",\"parent\":{\"id\":\"123456\"}}";
         given().
                 baseUri("https://postman-echo.com").
-                multiPart("file", new File("test.json")).
-                multiPart("attributes", attributes, "application/json").
+                multiPart("file", new File("test1.json")).
+           //     multiPart("attributes", attributes, "application/json").
                 log().all().
         when().
                 post("/post").

@@ -35,7 +35,7 @@ public class b_number {
 		//To check closeTo condition: operand+deviation or operand-deviation
 		@Test
 		public void givenADouble_whenCloseTo_thenCorrect() {
-		    assertThat(1.2, closeTo(1, 0.5));
+		    assertThat(1.2, closeTo(1, 0.5)); 
 		}
 
 }

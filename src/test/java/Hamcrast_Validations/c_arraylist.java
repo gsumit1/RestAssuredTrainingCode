@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.testng.annotations.Test;
 import org.testng.collections.Lists;
 import org.testng.collections.Maps;
@@ -25,8 +26,16 @@ public class c_arraylist {
     public void example() {
 		//check if single element is in a collection
 		List<String> collection = Lists.newArrayList("ab", "cd", "ef");
+		
+		
 		assertThat(collection, hasItem("cd"));
 		assertThat(collection, not(hasItem("zz")));
+		
+		
+		
+		
+		
+		
 		
 		//check if multiple elements are in a collection
 		List<String> collection1 = Lists.newArrayList("ab", "cd", "ef");

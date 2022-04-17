@@ -8,15 +8,19 @@ import static io.restassured.RestAssured.given;
 public class TestSerilization {
 	
 	
-	//@Test
+	
+	
+	
+	
+	
+	@Test
 	public void testSerilization() {
 		
 		Address a=new Address("251","Sumit1","Tester1");
 		
 		given().contentType(ContentType.JSON).body(a).when().post("http://localhost:3000/posts").then().statusCode(201);
 		
-		
-		
+	
 	}
 	
 	@Test

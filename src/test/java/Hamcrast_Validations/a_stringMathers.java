@@ -1,5 +1,6 @@
 package Hamcrast_Validations;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -17,6 +18,10 @@ public class a_stringMathers {
 	    @Test //Type Safe
 	    public void example0() {
 	        String a = "foo";
+	        
+	        String b="Foo";
+	        assertThat(a, equalToIgnoringCase(b));
+	        
 	        //Integer b = "FOO";
 	        //assertThat(a, equalToIgnoringCase(b));
 	    }
@@ -32,11 +37,15 @@ public class a_stringMathers {
 	    public void example2() {
 	        String a = "foo";
 	        String b = "FOO";
+	        Assert.assertEquals(a, b);
+	        
+	        
+	        
 	        assertThat(a, equalTo(b));
 	    }
 		    
 	    @Test
-	    public void example3() {
+	    public void example3() {	    	
 	        String a = "foo";
 	        String b = "FOO";
 	        assertThat(a, is(b));
@@ -49,7 +58,7 @@ public class a_stringMathers {
 	    
 	    @Test
 	    public void example5() {
-	    	assertThat("test", containsString("est"));
+	    	assertThat("Sumit Noida", containsString("Noida"));
 	    }
 	    	    
 	    @Test

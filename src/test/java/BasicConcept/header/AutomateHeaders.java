@@ -14,7 +14,13 @@ public class AutomateHeaders {
     @Test
     public void multiple_headers(){
         Header header = new Header("header", "header1");
+        
+        
         Header matchHeader = new Header("x-mock-match-request-headers", "header");
+        
+        
+        
+        
         given().
                 baseUri("https://d2a58293-8341-42b7-84c1-75882c567109.mock.pstmn.io").
                 header(header).
@@ -96,7 +102,7 @@ public class AutomateHeaders {
         then().
                 assertThat().
                 statusCode(200).
-                headers("responseHeader", "resValue1",
+                headers("responseHeader", "resValue12",
                         "X-RateLimit-Limit", "120");
     }
 
@@ -116,15 +122,20 @@ public class AutomateHeaders {
                 statusCode(200).
                 extract().
                 headers();
-
+        /*
         for(Header header: extractedHeaders){
             System.out.print("header name = " + header.getName() + ", ");
             System.out.println("header value = " + header.getValue());
-        }
+        }*/
 
-/*        System.out.println("header name = " + extractedHeaders.get("responseHeader").getName());
+        System.out.println("header name = " + extractedHeaders.get("responseHeader").getName());
         System.out.println("header value = " + extractedHeaders.get("responseHeader").getValue());
-        System.out.println("header value = " + extractedHeaders.getValue("responseHeader"));*/
+        
+        
+        
+        
+        
+        //System.out.println("header value = " + extractedHeaders.getValue("responseHeader"));
     }
 
     @Test
