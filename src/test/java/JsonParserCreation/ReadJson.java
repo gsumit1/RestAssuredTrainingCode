@@ -19,22 +19,22 @@ public class ReadJson {
 
 		JSONParser parser = new JSONParser();
 
-		Reader reader = new FileReader(".//test.json");
+		Reader reader = new FileReader(".//test1.json");
 
 		JSONObject ob = (JSONObject) parser.parse(reader);
 		
 		
 		
-		given().contentType("application/json; charset=UTF-16").body(ob.toJSONString()).post("http://localhost:3000/posts").then().statusCode(201);
+		///given().contentType("application/json; charset=UTF-16").body(ob.toJSONString()).post("http://localhost:3000/posts").then().statusCode(201);
 
 		
 		
-		/*
+		
 		String name = (String) ob.get("name");
 
 		System.out.println(name);
 
-		Long age = (Long) ob.get("age");
+		String age = (String) ob.get("age");
 
 		System.out.println(age);
 		
@@ -50,7 +50,7 @@ public class ReadJson {
 			System.out.println(it.next());
 			
 			
-		}*/
+		}
 		
 		
 		

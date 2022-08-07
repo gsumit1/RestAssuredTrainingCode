@@ -14,12 +14,8 @@ public class AutomateHeaders {
     @Test
     public void multiple_headers(){
         Header header = new Header("header", "header1");
-        
-        
+               
         Header matchHeader = new Header("x-mock-match-request-headers", "header");
-        
-        
-        
         
         given().
                 baseUri("https://d2a58293-8341-42b7-84c1-75882c567109.mock.pstmn.io").

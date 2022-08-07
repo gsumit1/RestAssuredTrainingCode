@@ -12,6 +12,9 @@ public class CreateJson {
 	public static void main(String[] args) {
 
 		JSONObject obj = new JSONObject();
+		
+		
+	//	Map<String, String> m=new HashMap<String, String>();
 		obj.put("name", "Sumit");
 		obj.put("age", 49);
 
@@ -19,8 +22,23 @@ public class CreateJson {
 		list.add("msg 1");
 		list.add("msg 2");
 		list.add("msg 3");
+		
+		
+		JSONObject obj1 = new JSONObject();
+		
+		
+		obj1.put("streetName", "name");
+		
+		
+		obj.put("address", obj1);
 
 		obj.put("messages", list);
+		
+		
+		
+		
+		
+		
 
 		try {
 			@SuppressWarnings("resource")
@@ -35,3 +53,5 @@ public class CreateJson {
 	}
 
 }
+
+
