@@ -6,24 +6,16 @@ import io.restassured.http.ContentType;
 
 import static io.restassured.RestAssured.given;
 public class TestSerilization {
-	
-	
-	
-	
-	
-	
-	
+		
 	@Test
 	public void testSerilization() {
 		
 		Address a=new Address("251","Sumit1","Tester1");
-		
-		
+				
 		//given().auth().basic(null, null).when().get(null)
 		
 		given().contentType(ContentType.JSON).body(a).when().post("http://localhost:3000/posts").then().statusCode(201);
 		
-	
 	}
 	
 	@Test
@@ -34,8 +26,4 @@ public class TestSerilization {
 		System.out.println(a.getName());
 	}
 	
-	
-	
-	
-
 }
