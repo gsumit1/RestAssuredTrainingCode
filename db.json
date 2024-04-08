@@ -12,7 +12,7 @@
     "fruits": [ "apple", "orange", "pear" ],
                 "vegetables": [
                   {
-                    "veggieName": 1,
+                    "veggieName": "pear",
                     "veggieLike": true
                   },
                   {
